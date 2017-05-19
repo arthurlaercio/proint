@@ -26,7 +26,6 @@
                 <th scope="col"><?= $this->Paginator->sort('curso_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('data_nascimento') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('email') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('endereco_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('criado_por') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('modificado_por') ?></th>
@@ -45,7 +44,6 @@
                 <td><?= $user->has('curso') ? $this->Html->link($user->curso->id, ['controller' => 'Cursos', 'action' => 'view', $user->curso->id]) : '' ?></td>
                 <td><?= h($user->data_nascimento) ?></td>
                 <td><?= h($user->email) ?></td>
-                <td><?= $this->Number->format($user->endereco_id) ?></td>
                 <td><?= $this->Number->format($user->criado_por) ?></td>
                 <td><?= h($user->created) ?></td>
                 <td><?= $this->Number->format($user->modificado_por) ?></td>

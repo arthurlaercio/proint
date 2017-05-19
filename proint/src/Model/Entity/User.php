@@ -14,7 +14,6 @@ use Cake\ORM\Entity;
  * @property int $curso_id
  * @property \Cake\I18n\FrozenDate $data_nascimento
  * @property string $email
- * @property int $endereco_id
  * @property int $criado_por
  * @property \Cake\I18n\FrozenTime $created
  * @property int $modificado_por

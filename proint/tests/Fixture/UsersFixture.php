@@ -25,7 +25,6 @@ class UsersFixture extends TestFixture
         'curso_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'data_nascimento' => ['type' => 'date', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
         'email' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-        'endereco_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'criado_por' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'created' => ['type' => 'datetime', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
         'modificado_por' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
@@ -53,13 +52,12 @@ class UsersFixture extends TestFixture
             'senha' => 'Lorem ipsum dolor sit amet',
             'cpf' => 'Lorem ipsum dolor sit amet',
             'curso_id' => 1,
-            'data_nascimento' => '2017-05-15',
+            'data_nascimento' => '2017-05-19',
             'email' => 'Lorem ipsum dolor sit amet',
-            'endereco_id' => 1,
             'criado_por' => 1,
-            'created' => '2017-05-15 15:05:55',
+            'created' => '2017-05-19 03:55:27',
             'modificado_por' => 1,
-            'modified' => '2017-05-15 15:05:55'
+            'modified' => '2017-05-19 03:55:27'
         ],
     ];
 }

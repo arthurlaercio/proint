@@ -31,7 +31,6 @@
             echo $this->Form->control('curso_id', ['options' => $cursos]);
             echo $this->Form->control('data_nascimento', ['empty' => true]);
             echo $this->Form->control('email');
-            echo $this->Form->control('endereco_id');
             echo $this->Form->control('criado_por');
             echo $this->Form->control('modificado_por');
         ?>

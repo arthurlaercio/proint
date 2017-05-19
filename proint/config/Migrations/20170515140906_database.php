@@ -75,11 +75,6 @@ class Database extends AbstractMigration
                 'limit' => 255,
                 'null' => false,
             ])
-            ->addColumn('endereco_id', 'integer', [
-                'default' => null,
-                'limit' => 11,
-                'null' => false,
-            ])
             ->addColumn('criado_por', 'integer', [
                 'default' => null,
                 'limit' => 11,
@@ -240,5 +235,6 @@ class Database extends AbstractMigration
                 'null' => false,
             ])
             ->create();
+
     }
 }

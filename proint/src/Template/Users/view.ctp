@@ -48,10 +48,6 @@
             <td><?= $this->Number->format($user->id) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Endereco Id') ?></th>
-            <td><?= $this->Number->format($user->endereco_id) ?></td>
-        </tr>
-        <tr>
             <th scope="row"><?= __('Criado Por') ?></th>
             <td><?= $this->Number->format($user->criado_por) ?></td>
         </tr>
