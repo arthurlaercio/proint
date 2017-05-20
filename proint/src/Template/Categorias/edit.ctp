@@ -26,7 +26,6 @@
         <?php
             echo $this->Form->control('nome');
             echo $this->Form->control('descricao');
-            echo $this->Form->control('curso_id', ['options' => $cursos]);
             echo $this->Form->control('quantidad_hora_minima');
             echo $this->Form->control('quantidad_hora_maxima');
             echo $this->Form->control('criado_por');

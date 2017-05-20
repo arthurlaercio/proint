@@ -9,6 +9,8 @@
         <li><?= $this->Html->link(__('New User'), ['action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Cursos'), ['controller' => 'Cursos', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Curso'), ['controller' => 'Cursos', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Perfis'), ['controller' => 'Perfis', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Perfi'), ['controller' => 'Perfis', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Atividades'), ['controller' => 'Atividades', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Atividade'), ['controller' => 'Atividades', 'action' => 'add']) ?></li>
     </ul>
@@ -24,6 +26,7 @@
                 <th scope="col"><?= $this->Paginator->sort('senha') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('cpf') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('curso_id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('perfil_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('data_nascimento') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('email') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('criado_por') ?></th>
@@ -42,6 +45,7 @@
                 <td><?= h($user->senha) ?></td>
                 <td><?= h($user->cpf) ?></td>
                 <td><?= $user->has('curso') ? $this->Html->link($user->curso->id, ['controller' => 'Cursos', 'action' => 'view', $user->curso->id]) : '' ?></td>
+                <td><?= $user->has('perfi') ? $this->Html->link($user->perfi->id, ['controller' => 'Perfis', 'action' => 'view', $user->perfi->id]) : '' ?></td>
                 <td><?= h($user->data_nascimento) ?></td>
                 <td><?= h($user->email) ?></td>
                 <td><?= $this->Number->format($user->criado_por) ?></td>

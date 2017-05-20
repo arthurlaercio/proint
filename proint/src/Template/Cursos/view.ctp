@@ -14,6 +14,8 @@
         <li><?= $this->Html->link(__('New Categoria'), ['controller' => 'Categorias', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('List Cursos Categorias'), ['controller' => 'CursosCategorias', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('New Cursos Categoria'), ['controller' => 'CursosCategorias', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
 <div class="cursos view large-9 medium-8 columns content">
@@ -64,7 +66,6 @@
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Nome') ?></th>
                 <th scope="col"><?= __('Descricao') ?></th>
-                <th scope="col"><?= __('Curso Id') ?></th>
                 <th scope="col"><?= __('Quantidad Hora Minima') ?></th>
                 <th scope="col"><?= __('Quantidad Hora Maxima') ?></th>
                 <th scope="col"><?= __('Criado Por') ?></th>
@@ -78,7 +79,6 @@
                 <td><?= h($categorias->id) ?></td>
                 <td><?= h($categorias->nome) ?></td>
                 <td><?= h($categorias->descricao) ?></td>
-                <td><?= h($categorias->curso_id) ?></td>
                 <td><?= h($categorias->quantidad_hora_minima) ?></td>
                 <td><?= h($categorias->quantidad_hora_maxima) ?></td>
                 <td><?= h($categorias->criado_por) ?></td>
@@ -106,9 +106,9 @@
                 <th scope="col"><?= __('Senha') ?></th>
                 <th scope="col"><?= __('Cpf') ?></th>
                 <th scope="col"><?= __('Curso Id') ?></th>
+                <th scope="col"><?= __('Perfil Id') ?></th>
                 <th scope="col"><?= __('Data Nascimento') ?></th>
                 <th scope="col"><?= __('Email') ?></th>
-                <th scope="col"><?= __('Endereco Id') ?></th>
                 <th scope="col"><?= __('Criado Por') ?></th>
                 <th scope="col"><?= __('Created') ?></th>
                 <th scope="col"><?= __('Modificado Por') ?></th>
@@ -123,9 +123,9 @@
                 <td><?= h($users->senha) ?></td>
                 <td><?= h($users->cpf) ?></td>
                 <td><?= h($users->curso_id) ?></td>
+                <td><?= h($users->perfil_id) ?></td>
                 <td><?= h($users->data_nascimento) ?></td>
                 <td><?= h($users->email) ?></td>
-                <td><?= h($users->endereco_id) ?></td>
                 <td><?= h($users->criado_por) ?></td>
                 <td><?= h($users->created) ?></td>
                 <td><?= h($users->modificado_por) ?></td>
@@ -134,6 +134,31 @@
                     <?= $this->Html->link(__('View'), ['controller' => 'Users', 'action' => 'view', $users->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['controller' => 'Users', 'action' => 'edit', $users->id]) ?>
                     <?= $this->Form->postLink(__('Delete'), ['controller' => 'Users', 'action' => 'delete', $users->id], ['confirm' => __('Are you sure you want to delete # {0}?', $users->id)]) ?>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </table>
+        <?php endif; ?>
+    </div>
+    <div class="related">
+        <h4><?= __('Related Cursos Categorias') ?></h4>
+        <?php if (!empty($curso->cursos_categorias)): ?>
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <th scope="col"><?= __('Id') ?></th>
+                <th scope="col"><?= __('Curso Id') ?></th>
+                <th scope="col"><?= __('Categoria Id') ?></th>
+                <th scope="col" class="actions"><?= __('Actions') ?></th>
+            </tr>
+            <?php foreach ($curso->cursos_categorias as $cursosCategorias): ?>
+            <tr>
+                <td><?= h($cursosCategorias->id) ?></td>
+                <td><?= h($cursosCategorias->curso_id) ?></td>
+                <td><?= h($cursosCategorias->categoria_id) ?></td>
+                <td class="actions">
+                    <?= $this->Html->link(__('View'), ['controller' => 'CursosCategorias', 'action' => 'view', $cursosCategorias->id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['controller' => 'CursosCategorias', 'action' => 'edit', $cursosCategorias->id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'CursosCategorias', 'action' => 'delete', $cursosCategorias->id], ['confirm' => __('Are you sure you want to delete # {0}?', $cursosCategorias->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

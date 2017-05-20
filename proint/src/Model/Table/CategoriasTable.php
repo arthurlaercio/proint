@@ -9,8 +9,8 @@ use Cake\Validation\Validator;
 /**
  * Categorias Model
  *
- * @property \Cake\ORM\Association\BelongsTo $Cursos
  * @property \Cake\ORM\Association\HasMany $Atividades
+ * @property \Cake\ORM\Association\BelongsToMany $Cursos
  *
  * @method \App\Model\Entity\Categoria get($primaryKey, $options = [])
  * @method \App\Model\Entity\Categoria newEntity($data = null, array $options = [])
@@ -41,12 +41,13 @@ class CategoriasTable extends Table
 
         $this->addBehavior('Timestamp');
 
-        $this->belongsTo('Cursos', [
-            'foreignKey' => 'curso_id',
-            'joinType' => 'INNER'
-        ]);
         $this->hasMany('Atividades', [
             'foreignKey' => 'categoria_id'
+        ]);
+        $this->belongsToMany('Cursos', [
+            'foreignKey' => 'categoria_id',
+            'targetForeignKey' => 'curso_id',
+            'joinTable' => 'cursos_categorias'
         ]);
     }
 
@@ -91,19 +92,5 @@ class CategoriasTable extends Table
             ->notEmpty('modificado_por');
 
         return $validator;
-    }
-
-    /**
-     * Returns a rules checker object that will be used for validating
-     * application integrity.
-     *
-     * @param \Cake\ORM\RulesChecker $rules The rules object to be modified.
-     * @return \Cake\ORM\RulesChecker
-     */
-    public function buildRules(RulesChecker $rules)
-    {
-        $rules->add($rules->existsIn(['curso_id'], 'Cursos'));
-
-        return $rules;
     }
 }

@@ -65,6 +65,11 @@ class Database extends AbstractMigration
                 'limit' => 11,
                 'null' => false,
             ])
+            ->addColumn('perfil_id', 'integer', [
+                'default' => null,
+                'limit' => 11,
+                'null' => false,
+            ])
             ->addColumn('data_nascimento', 'date', [
                 'default' => null,
                 'limit' => null,
@@ -106,11 +111,6 @@ class Database extends AbstractMigration
             ->addColumn('descricao', 'string', [
                 'default' => null,
                 'limit' => 255,
-                'null' => false,
-            ])
-            ->addColumn('curso_id', 'integer', [
-                'default' => null,
-                'limit' => 11,
                 'null' => false,
             ])
             ->addColumn('quantidad_hora_minima', 'integer', [
@@ -236,5 +236,17 @@ class Database extends AbstractMigration
             ])
             ->create();
 
+        $this->table('cursos_categorias')
+            ->addColumn('curso_id', 'integer', [
+                'default' => null,
+                'limit' => 11,
+                'null' => false,
+            ])
+            ->addColumn('categoria_id', 'integer', [
+                'default' => null,
+                'limit' => 11,
+                'null' => false,
+            ])
+            ->create();
     }
 }

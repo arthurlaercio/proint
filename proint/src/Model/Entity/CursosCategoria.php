@@ -4,22 +4,16 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * Categoria Entity
+ * CursosCategoria Entity
  *
  * @property int $id
- * @property string $nome
- * @property string $descricao
- * @property int $quantidad_hora_minima
- * @property int $quantidad_hora_maxima
- * @property int $criado_por
- * @property \Cake\I18n\FrozenTime $created
- * @property int $modificado_por
- * @property \Cake\I18n\FrozenTime $modified
+ * @property int $curso_id
+ * @property int $categoria_id
  *
  * @property \App\Model\Entity\Curso $curso
- * @property \App\Model\Entity\Atividade[] $atividades
+ * @property \App\Model\Entity\Categoria $categoria
  */
-class Categoria extends Entity
+class CursosCategoria extends Entity
 {
 
     /**

@@ -21,7 +21,7 @@ class UsersController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Cursos', 'Enderecos']
+            'contain' => ['Cursos', 'Perfis']
         ];
         $users = $this->paginate($this->Users);
 
@@ -39,7 +39,7 @@ class UsersController extends AppController
     public function view($id = null)
     {
         $user = $this->Users->get($id, [
-            'contain' => ['Cursos', 'Enderecos', 'Atividades']
+            'contain' => ['Cursos', 'Perfis', 'Atividades']
         ]);
 
         $this->set('user', $user);
@@ -64,8 +64,8 @@ class UsersController extends AppController
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
         }
         $cursos = $this->Users->Cursos->find('list', ['limit' => 200]);
-        $enderecos = $this->Users->Enderecos->find('list', ['limit' => 200]);
-        $this->set(compact('user', 'cursos', 'enderecos'));
+        $perfis = $this->Users->Perfis->find('list', ['limit' => 200]);
+        $this->set(compact('user', 'cursos', 'perfis'));
         $this->set('_serialize', ['user']);
     }
 
@@ -91,8 +91,8 @@ class UsersController extends AppController
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
         }
         $cursos = $this->Users->Cursos->find('list', ['limit' => 200]);
-        $enderecos = $this->Users->Enderecos->find('list', ['limit' => 200]);
-        $this->set(compact('user', 'cursos', 'enderecos'));
+        $perfis = $this->Users->Perfis->find('list', ['limit' => 200]);
+        $this->set(compact('user', 'cursos', 'perfis'));
         $this->set('_serialize', ['user']);
     }
 

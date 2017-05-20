@@ -11,6 +11,8 @@
         <li><?= $this->Html->link(__('New Categoria'), ['controller' => 'Categorias', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Cursos Categorias'), ['controller' => 'CursosCategorias', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Cursos Categoria'), ['controller' => 'CursosCategorias', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="cursos form large-9 medium-8 columns content">

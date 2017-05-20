@@ -51,9 +51,9 @@ class AtividadesFixture extends TestFixture
             'user_id' => 1,
             'upload' => 'Lorem ipsum dolor sit amet',
             'criado_por' => 1,
-            'created' => '2017-05-15 15:05:20',
+            'created' => '2017-05-20 21:40:33',
             'modificado_por' => 1,
-            'modified' => '2017-05-15 15:05:20'
+            'modified' => '2017-05-20 21:40:33'
         ],
     ];
 }

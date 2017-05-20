@@ -36,7 +36,7 @@ class CursosController extends AppController
     public function view($id = null)
     {
         $curso = $this->Cursos->get($id, [
-            'contain' => ['Categorias', 'Users']
+            'contain' => ['Categorias', 'Users', 'CursosCategorias']
         ]);
 
         $this->set('curso', $curso);

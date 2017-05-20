@@ -21,7 +21,6 @@
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('nome') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('descricao') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('curso_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('quantidad_hora_minima') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('quantidad_hora_maxima') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('criado_por') ?></th>
@@ -37,7 +36,6 @@
                 <td><?= $this->Number->format($categoria->id) ?></td>
                 <td><?= h($categoria->nome) ?></td>
                 <td><?= h($categoria->descricao) ?></td>
-                <td><?= $categoria->has('curso') ? $this->Html->link($categoria->curso->id, ['controller' => 'Cursos', 'action' => 'view', $categoria->curso->id]) : '' ?></td>
                 <td><?= $this->Number->format($categoria->quantidad_hora_minima) ?></td>
                 <td><?= $this->Number->format($categoria->quantidad_hora_maxima) ?></td>
                 <td><?= $this->Number->format($categoria->criado_por) ?></td>

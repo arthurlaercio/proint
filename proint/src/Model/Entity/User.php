@@ -12,6 +12,7 @@ use Cake\ORM\Entity;
  * @property string $senha
  * @property string $cpf
  * @property int $curso_id
+ * @property int $perfil_id
  * @property \Cake\I18n\FrozenDate $data_nascimento
  * @property string $email
  * @property int $criado_por
@@ -20,7 +21,7 @@ use Cake\ORM\Entity;
  * @property \Cake\I18n\FrozenTime $modified
  *
  * @property \App\Model\Entity\Curso $curso
- * @property \App\Model\Entity\Endereco $endereco
+ * @property \App\Model\Entity\Perfi $perfi
  * @property \App\Model\Entity\Atividade[] $atividades
  */
 class User extends Entity

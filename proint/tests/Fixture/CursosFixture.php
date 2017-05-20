@@ -49,9 +49,9 @@ class CursosFixture extends TestFixture
             'quantidade_periodo' => 1,
             'quantidade_hora_complementar' => 1,
             'criado_por' => 1,
-            'created' => '2017-05-15 15:05:43',
+            'created' => '2017-05-20 21:40:47',
             'modificado_por' => 1,
-            'modified' => '2017-05-15 15:05:43'
+            'modified' => '2017-05-20 21:40:47'
         ],
     ];
 }

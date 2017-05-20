@@ -9,6 +9,8 @@
         <li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Cursos'), ['controller' => 'Cursos', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Curso'), ['controller' => 'Cursos', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Perfis'), ['controller' => 'Perfis', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Perfi'), ['controller' => 'Perfis', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Atividades'), ['controller' => 'Atividades', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Atividade'), ['controller' => 'Atividades', 'action' => 'add']) ?></li>
     </ul>
@@ -23,6 +25,7 @@
             echo $this->Form->control('senha');
             echo $this->Form->control('cpf');
             echo $this->Form->control('curso_id', ['options' => $cursos]);
+            echo $this->Form->control('perfil_id', ['options' => $perfis]);
             echo $this->Form->control('data_nascimento', ['empty' => true]);
             echo $this->Form->control('email');
             echo $this->Form->control('criado_por');

@@ -45,9 +45,9 @@ class PerfisFixture extends TestFixture
             'nome' => 'Lorem ipsum dolor sit amet',
             'alias' => 'Lorem ipsum dolor sit amet',
             'criado_por' => 1,
-            'created' => '2017-05-15 15:05:48',
+            'created' => '2017-05-20 21:40:58',
             'modificado_por' => 1,
-            'modified' => '2017-05-15 15:05:48'
+            'modified' => '2017-05-20 21:40:58'
         ],
     ];
 }

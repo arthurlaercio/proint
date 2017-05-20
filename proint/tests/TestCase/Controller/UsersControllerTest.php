@@ -20,7 +20,8 @@ class UsersControllerTest extends IntegrationTestCase
         'app.cursos',
         'app.categorias',
         'app.atividades',
-        'app.enderecos'
+        'app.cursos_categorias',
+        'app.perfis'
     ];
 
     /**

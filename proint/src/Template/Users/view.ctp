@@ -12,6 +12,8 @@
         <li><?= $this->Html->link(__('New User'), ['action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Cursos'), ['controller' => 'Cursos', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Curso'), ['controller' => 'Cursos', 'action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('List Perfis'), ['controller' => 'Perfis', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('New Perfi'), ['controller' => 'Perfis', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Atividades'), ['controller' => 'Atividades', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Atividade'), ['controller' => 'Atividades', 'action' => 'add']) ?> </li>
     </ul>
@@ -38,6 +40,10 @@
         <tr>
             <th scope="row"><?= __('Curso') ?></th>
             <td><?= $user->has('curso') ? $this->Html->link($user->curso->id, ['controller' => 'Cursos', 'action' => 'view', $user->curso->id]) : '' ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Perfi') ?></th>
+            <td><?= $user->has('perfi') ? $this->Html->link($user->perfi->id, ['controller' => 'Perfis', 'action' => 'view', $user->perfi->id]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Email') ?></th>

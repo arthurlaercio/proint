@@ -19,7 +19,9 @@ class CursosControllerTest extends IntegrationTestCase
         'app.cursos',
         'app.categorias',
         'app.atividades',
-        'app.users'
+        'app.users',
+        'app.perfis',
+        'app.cursos_categorias'
     ];
 
     /**

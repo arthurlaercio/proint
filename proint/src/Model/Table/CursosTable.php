@@ -9,8 +9,8 @@ use Cake\Validation\Validator;
 /**
  * Cursos Model
  *
- * @property \Cake\ORM\Association\HasMany $Categorias
  * @property \Cake\ORM\Association\HasMany $Users
+ * @property \Cake\ORM\Association\BelongsToMany $Categorias
  *
  * @method \App\Model\Entity\Curso get($primaryKey, $options = [])
  * @method \App\Model\Entity\Curso newEntity($data = null, array $options = [])
@@ -41,11 +41,13 @@ class CursosTable extends Table
 
         $this->addBehavior('Timestamp');
 
-        $this->hasMany('Categorias', [
-            'foreignKey' => 'curso_id'
-        ]);
         $this->hasMany('Users', [
             'foreignKey' => 'curso_id'
+        ]);
+        $this->belongsToMany('Categorias', [
+            'foreignKey' => 'curso_id',
+            'targetForeignKey' => 'categoria_id',
+            'joinTable' => 'cursos_categorias'
         ]);
     }
 

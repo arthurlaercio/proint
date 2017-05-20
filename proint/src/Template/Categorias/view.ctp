@@ -28,10 +28,6 @@
             <td><?= h($categoria->descricao) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Curso') ?></th>
-            <td><?= $categoria->has('curso') ? $this->Html->link($categoria->curso->id, ['controller' => 'Cursos', 'action' => 'view', $categoria->curso->id]) : '' ?></td>
-        </tr>
-        <tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($categoria->id) ?></td>
         </tr>

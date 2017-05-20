@@ -27,7 +27,9 @@ class CursosTableTest extends TestCase
         'app.cursos',
         'app.categorias',
         'app.atividades',
-        'app.users'
+        'app.users',
+        'app.perfis',
+        'app.cursos_categorias'
     ];
 
     /**
