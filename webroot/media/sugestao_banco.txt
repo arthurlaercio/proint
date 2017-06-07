@@ -1,0 +1,7 @@
+perfis (nome, alias)
+users(admin, coordenador e aluno) (login, senha ,nome, cpf, curso_id, data_nascimento, email, endereco_id)
+enderecos (rua, bairro, cidade, estado, pais)
+categorias_atividades (nome, curso_id,descricao, quantidade_hora_maxima,quantidade_hora_minima)
+atividades (descricao , categoria_atividade_id, caminho ) 
+cursos (nome, descricao, quantidade_periodos, horas_atividades_complementares)
+users_categorias_atividades (id, user_id, atividade_id)
